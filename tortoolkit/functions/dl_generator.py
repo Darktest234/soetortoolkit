@@ -6,13 +6,7 @@ import logging
 from bs4 import BeautifulSoup
 
 torlog = logging.getLogger(__name__)
-
-async def generate_directs(url):
-    #blocklinks
-    if 'mega.nz' in url or 'drive.google.com' in url or 'uptobox.com' in url \
-    or '1fiecher.com' in url or 'googleusercontent.com' in url:
-        return "**ERROR:** Unsupported URL!"
-    
+   
     #mediafire.com
     elif 'mediafire.com' in url:
         try:
